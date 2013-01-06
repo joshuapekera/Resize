@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>PyroResize v1.0</title>
+<link rel="stylesheet" href="styles.css" />
+<script>
+
+function resizeWindow(winSize) {
+	
+	//detect lower than Safari 6...
+	
+	if (safari.application.privateBrowsing) { 
+
+		scrollBar = 0;
+
+	} else {
+	
+		scrollBar = 15;
+	
+	}
+	
+	window.self.moveTo(0,0);
+	
+	if(winSize===1) {
+		window.self.resizeTo(320+scrollBar,screen.availHeight);
+	}
+	
+	if(winSize===2) {
+		window.self.resizeTo(480+scrollBar,screen.availHeight);
+	}
+	
+	if(winSize===3) {
+		window.self.resizeTo(640+scrollBar,screen.availHeight);
+	}
+	
+	if(winSize===4) {
+		window.self.resizeTo(768+scrollBar,screen.availHeight);
+	}
+	
+	if(winSize===5) {
+		window.self.resizeTo(1024+scrollBar,screen.availHeight);
+	}
+	
+	if(winSize===6) {
+		window.self.resizeTo(screen.availWidth,screen.availHeight);
+	}
+	
+	if(winSize===7) {
+		window.self.resizeTo(window.innerWidth-1,screen.availHeight);
+	}
+	
+	if(winSize===8) {
+		window.self.resizeTo(window.innerWidth+1,screen.availHeight);
+	}
+	
+	if(winSize===9) {
+		var customWidth = parseInt(document.getElementById('custom').value);
+		window.self.resizeTo(customWidth+scrollBar,screen.availHeight);
+	}
+
+}
+
+function launchSite() {
+
+	var newTab=safari.self.browserWindow.openTab();
+	newTab.url="http://www.pyrocms.com";
+
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+<div class="bar">
+
+	<button type="button" onclick="resizeWindow(1)">320</button>
+	
+	<button type="button" onclick="resizeWindow(2)">480</button>
+	
+	<button type="button" onclick="resizeWindow(3)">640</button>
+	
+	<button type="button" onclick="resizeWindow(4)">768</button>
+	
+	<button type="button" onclick="resizeWindow(5)">1024</button>
+	
+	<button type="button" onclick="resizeWindow(6)">Full Screen</button>
+	
+	<button type="button" onclick="resizeWindow(7)">-1px</button>
+	
+	<button type="button" onclick="resizeWindow(8)">+1px</button>
+	
+	<div class="divider"></div>
+	
+	<input type="text" id="custom" placeholder="custom" name="custom" value="" />
+	
+	<button type="button" class="resize" onclick="resizeWindow(9)">resize</button>
+	
+	<div id="credits">
+	<button type="button" onclick="launchSite()">&nbsp;PyroCMS&nbsp;</button>
+	</div>
+
+</div>
+
+</body>
+</html>
