@@ -71,7 +71,7 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>https://raw.github.com/joshuapekera/PyroResize/master/PyroResize.safariextension/Info.plist</string>
+	<string>https://github.com/joshuapekera/PyroResize/raw/master/update.plist</string>
 	<key>Website</key>
 	<string>http://lab.joshuapekera.com/</string>
 </dict>
