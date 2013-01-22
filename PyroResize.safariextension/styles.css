@@ -16,12 +16,11 @@ button {
 	display: inline-block;
 	margin: 0 4px;
 	border: 1px solid #222;
-	-webkit-border-radius: 3px;
+	-webkit-border-radius: 4px;
 	height: 22px;
 	background: -webkit-linear-gradient(#666, #444);
-	/* background: -webkit-linear-gradient(top, rgba(129,150,178,1) 0%,rgba(88,119,162,1) 50%,rgba(71,105,153,1) 51%,rgba(74,108,155,1) 100%); */
 	text-shadow: #3B4C62 0 -1px 1px;
-	-webkit-box-shadow: rgba(255,255,255,.2) 0 1px 0px, inset rgba(255,255,255,.25) 0 1px 1px;
+	-webkit-box-shadow: inset 0 1px 0px rgba(255,255,255,.2), inset 0 0px 2px rgba(255,255,255,.15), 0 1px 0px rgba(255,255,255,.15);
 	font-weight: bold;
 	-webkit-transition: all 100ms linear;
 }
@@ -29,26 +28,37 @@ button {
 button:active {
 	border: 1px solid #111;
 	background: -webkit-linear-gradient(#333, #444);
-	-webkit-box-shadow: rgba(255,255,255,.28) 0 1px 1px, inset rgba(0,0,0,.3) 0 1px 0;
+	-webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.3), 0 1px 1px rgba(255,255,255,.2);
 }
 
 .bar button:first-child {
 	margin-left: 0px;
 }
 
-button.resize {
+.bar button.resize {
 	margin-left: 0px;
 	float: left;
 	-webkit-border-radius: 0 3px 3px 0;
 }
 
-button:nth-child(7) {
+.bar button:nth-child(7) {
 	margin-right: 0;
 	-webkit-border-radius: 3px 0 0 3px;
 	border-right: none; 
 }
 
-button:nth-child(8) {
+.bar button:nth-child(8) {
+	margin-left: 0;
+	-webkit-border-radius: 0 3px 3px 0;
+}
+
+.bar button:nth-child(9) {
+	margin-right: 0;
+	-webkit-border-radius: 3px 0 0 3px;
+	border-right: none; 
+}
+
+.bar button:nth-child(10) {
 	margin-left: 0;
 	-webkit-border-radius: 0 3px 3px 0;
 }
