@@ -55,6 +55,14 @@ function resizeWindow(winSize) {
 	}
 	
 	if(winSize===9) {
+		window.self.resizeTo(window.innerWidth-10,screen.availHeight);
+	}
+	
+	if(winSize===10) {
+		window.self.resizeTo(window.innerWidth+10,screen.availHeight);
+	}
+	
+	if(winSize===11) {
 		var customWidth = parseInt(document.getElementById('custom').value);
 		window.self.resizeTo(customWidth+scrollBar,screen.availHeight);
 	}
@@ -93,11 +101,15 @@ function launchSite() {
 	
 	<button type="button" onclick="resizeWindow(8)">+1px</button>
 	
+	<button type="button" onclick="resizeWindow(9)">-10px</button>
+	
+	<button type="button" onclick="resizeWindow(10)">+10px</button>
+	
 	<div class="divider"></div>
 	
 	<input type="text" id="custom" placeholder="custom" name="custom" value="" />
 	
-	<button type="button" class="resize" onclick="resizeWindow(9)">resize</button>
+	<button type="button" class="resize" onclick="resizeWindow(11)">resize</button>
 	
 	<div id="credits">
 	<button type="button" onclick="launchSite()">&nbsp;PyroCMS&nbsp;</button>
